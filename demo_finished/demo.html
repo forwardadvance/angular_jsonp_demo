@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jsonp</title>
+  <script src="lib/angular.js"></script>
+  <script src="js/demo.js"></script>
+</head>
+<body ng-app="app" ng-controller="weatherController">
+  <div>
+    <form>
+      <input
+        ng-model='loc'
+        ng-change="getFeed()"
+        ng-model-options="{debounce:500}"/>
+      {{loc}}
+      <button ng-click="getFeed()">Click</button>
+    </form>
+    <div ng-show="spinner">Loading!!!</div>
+    <div>
+      <pre>
+        {{weather | json}}
+      </pre>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!--
+Model Options Debounce - ng-model-options="{debounce: 500}"
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Initial state -->
+
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jsonp</title>
+  <script src="angular.js"></script>
+  <script src="demo.js"></script>
+</head>
+<body ng-app="app" ng-controller="weatherController">
+  <div>
+    <form>
+      <input ng-model='loc'/>
+      <button ng-click="getFeed()"">Click</button>
+    </form>
+    <div ng-show="spinner">Loading!!!</div>
+    <div>
+      <pre>
+        {{weather | json}}
+      </pre>
+    </div>
+  </div>
+</body>
+</html>
+ -->
